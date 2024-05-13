@@ -24,7 +24,7 @@ export default defineNitroPlugin((nitroApp) => {
   });
 });
 
-function parseConfig(config: any, prefix: string) {
+function parseConfig(config, prefix: string) {
   Object.keys(config).forEach((key) => {
     const value = config[key];
     const newPrefix = `${prefix}_${key}`;
