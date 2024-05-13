@@ -16,7 +16,6 @@ hero:
       icon: i-heroicons-arrow-right-20-solid
       trailing: true
       to: '/kitchen-sink'
-      size: lg
 features:
   title: 'Explore ZKsync Docs'
   items:

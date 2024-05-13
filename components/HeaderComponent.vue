@@ -12,7 +12,10 @@ const { header } = useAppConfig();
 </script>
 
 <template>
-  <UHeader :links>
+  <UHeader
+    :links
+    :ui="{ container: 'max-w-full' }"
+  >
     <template #logo>
       <template v-if="header?.logo?.dark || header?.logo?.light">
         <UColorModeImage v-bind="{ class: 'h-6 w-auto', ...header?.logo }" />
@@ -28,13 +31,13 @@ const { header } = useAppConfig();
     </template>
 
     <template #right>
-      <UColorModeButton />
+      <UColorModeButton variant="soft" />
 
       <template v-if="header?.links">
         <UButton
           v-for="(link, index) of header.links"
           :key="index"
-          v-bind="{ color: 'gray', variant: 'ghost', ...link }"
+          v-bind="{ color: 'gray', variant: 'soft', ...link }"
         />
       </template>
     </template>

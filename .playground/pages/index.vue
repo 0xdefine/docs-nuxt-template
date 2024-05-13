@@ -46,7 +46,9 @@ useSeoMeta({
       </template>
 
       <template #title>
-        <MDC :value="page.hero.title" />
+        Unlock <span class="font-serif font-light italic">the</span> Potential
+        <span class="font-serif font-light italic">of</span>&nbsp; Layer 2 Scaling
+        <span class="font-serif font-light italic">with</span> ZKsync
       </template>
     </ULandingHero>
 

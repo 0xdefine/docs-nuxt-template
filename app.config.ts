@@ -4,18 +4,28 @@ export default defineAppConfig({
     variables: {
       light: {
         background: '255 252 255',
-        // foreground: '147 68 68',
+        foreground: 'color-gray-900',
       },
       dark: {
-        background: '17 20 43',
-        // foreground: 'var(--color-gray-200)',
+        background: 'bg-black',
+        foreground: 'color-white',
       },
-      // header: {
-      //   height: '1rem',
-      // },
     },
-    primary: 'zkPurple',
-    gray: 'zkSlate',
+    primary: 'blue',
+    gray: 'slate',
+    button: {
+      rounded: 'rounded-full',
+      variant: {
+        solid: 'dark:text-white dark:bg-{color}-500 dark:hover:bg-{color}-400',
+        soft: 'dark:bg-gray-900 dark:hover:bg-gray-800',
+      },
+      padding: {
+        xl: 'py-5 px-8',
+      },
+      default: {
+        size: 'xl',
+      },
+    },
     footer: {
       bottom: {
         left: 'text-sm text-gray-500 dark:text-gray-400',
@@ -50,6 +60,14 @@ export default defineAppConfig({
       light: '/logos/zksync_logo_black.svg',
       dark: '/logos/zksync_logo.svg',
     },
+    links: [
+      {
+        icon: 'i-zksync-matterlabs-logo',
+        to: 'https://matter-labs.io',
+        target: '_blank',
+        'aria-label': 'MatterLabs Website',
+      },
+    ],
   },
   footer: {
     credits: 'Made with ❤️ by Matter Labs & Community',

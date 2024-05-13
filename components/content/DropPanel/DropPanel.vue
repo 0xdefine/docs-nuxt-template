@@ -4,6 +4,7 @@
       v-for="(tab, index) in tabs"
       :key="index"
       v-slot="{ open }"
+      as="span"
     >
       <HeadlessDisclosureButton
         class="focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 inline-flex w-full flex-shrink-0 items-center gap-x-1.5 rounded-none py-6 text-left text-lg font-medium text-gray-500 underline-offset-4 hover:text-gray-700 hover:no-underline focus:outline-none focus-visible:outline-0 focus-visible:ring-2 focus-visible:ring-inset disabled:cursor-not-allowed disabled:opacity-75 dark:text-gray-400 dark:hover:text-gray-200"
