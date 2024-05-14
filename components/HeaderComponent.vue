@@ -1,10 +1,5 @@
 <script setup lang="ts">
 import type { NavItem } from '@nuxt/content/dist/runtime/types';
-import type { Link } from '@nuxt/ui-pro/types';
-
-defineProps<{
-  links: Link[];
-}>();
 
 const navigation = inject<NavItem[]>('navigation', []);
 
