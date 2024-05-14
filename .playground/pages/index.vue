@@ -45,9 +45,7 @@ useSeoMeta({
         </UBadge>
       </template>
 
-      <template #title>
-        <MDC :value="page.hero.title" />
-      </template>
+      <template #title> Unlock the Potential of Layer 2 Scaling with ZKsync </template>
     </ULandingHero>
 
     <ULandingSection

@@ -19,10 +19,10 @@
   ],
   "scripts": {
     "postinstall": "nuxt prepare",
-    "dev": "nuxi dev .playground",
-    "build": "nuxt generate .playground",
+    "dev": "DEV=true nuxi dev .playground",
+    "build": "DEV=true nuxt generate .playground",
     "lint": "eslint .",
-    "prepare": "nuxt prepare .playground",
+    "prepare": "DEV=true nuxt prepare .playground",
     "lint:spelling": "cspell **/*.md --config=./cspell.json",
     "lint:markdown": "markdownlint-cli2 \"content/**/*.md\" --config \".markdownlint.json\"",
     "lint:eslint": "eslint .",
