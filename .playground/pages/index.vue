@@ -45,11 +45,7 @@ useSeoMeta({
         </UBadge>
       </template>
 
-      <template #title>
-        Unlock <span class="font-serif font-light italic">the</span> Potential
-        <span class="font-serif font-light italic">of</span>&nbsp; Layer 2 Scaling
-        <span class="font-serif font-light italic">with</span> ZKsync
-      </template>
+      <template #title> Unlock the Potential of Layer 2 Scaling with ZKsync </template>
     </ULandingHero>
 
     <ULandingSection

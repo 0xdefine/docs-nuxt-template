@@ -61,7 +61,7 @@ export default defineNuxtConfig({
   $development: {
     runtimeConfig: {
       public: {
-        app: null,
+        app: 'template',
         urls: {
           docs: 'https://staging-docs.zksync.io',
           code: 'https://staging-code.zksync.io',
@@ -73,7 +73,7 @@ export default defineNuxtConfig({
   $production: {
     runtimeConfig: {
       public: {
-        app: null,
+        app: '',
         urls: {
           docs: 'https://docs.zksync.io',
           code: 'https://code.zksync.io',
