@@ -65,7 +65,7 @@ export default defineNuxtConfig({
         urls: {
           docs: 'https://staging-docs.zksync.io',
           code: 'https://staging-code.zksync.io',
-          sdk: 'https://staging-docs.zksync.io/sdk',
+          sdk: 'https://zksync-sdk-docs-staging.web.app/sdk',
         },
       },
     },
