@@ -8,12 +8,40 @@ defineProps<{
 
 const navigation = inject<NavItem[]>('navigation', []);
 
+const config = useRuntimeConfig();
+
 const { header } = useAppConfig();
+const headerNav: { to: string; target?: string; label: string }[] = [
+  {
+    label: 'Docs',
+    to: config.public.app === 'docs' ? '/build' : `${config.public.urls.docs}/build`,
+  },
+  {
+    label: 'SDK',
+    to: config.public.app === 'sdk' ? '/sdk' : `${config.public.urls.sdk}`,
+  },
+  {
+    label: 'ZK Stack',
+    to: config.public.app === 'docs' ? '/zk-stack' : `${config.public.urls.docs}/zk-stack`,
+  },
+  {
+    label: 'External Node',
+    to: config.public.app === 'docs' ? '/external-node' : `${config.public.urls.docs}/external-node`,
+  },
+  {
+    label: 'Ecosystem',
+    to: config.public.app === 'docs' ? '/ecosystem' : `${config.public.urls.docs}/ecosystem`,
+  },
+  {
+    label: 'Community Code',
+    to: config.public.app === 'code' ? '/' : `${config.public.urls.code}`,
+  },
+];
 </script>
 
 <template>
   <UHeader
-    :links
+    :links="headerNav"
     :ui="{ container: 'max-w-full' }"
   >
     <template #logo>

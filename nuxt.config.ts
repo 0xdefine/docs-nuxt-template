@@ -58,4 +58,28 @@ export default defineNuxtConfig({
       },
     },
   },
+  $development: {
+    runtimeConfig: {
+      public: {
+        app: null,
+        urls: {
+          docs: 'https://staging-docs.zksync.io',
+          code: 'https://staging-code.zksync.io',
+          sdk: 'https://staging-docs.zksync.io/sdk',
+        },
+      },
+    },
+  },
+  $production: {
+    runtimeConfig: {
+      public: {
+        app: null,
+        urls: {
+          docs: 'https://docs.zksync.io',
+          code: 'https://code.zksync.io',
+          sdk: 'https://docs.zksync.io/sdk',
+        },
+      },
+    },
+  },
 });
