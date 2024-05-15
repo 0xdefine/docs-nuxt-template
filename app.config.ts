@@ -22,9 +22,6 @@ export default defineAppConfig({
       padding: {
         xl: 'py-5 px-8',
       },
-      default: {
-        size: 'xl',
-      },
     },
     footer: {
       bottom: {
@@ -52,7 +49,7 @@ export default defineAppConfig({
     },
   },
   seo: {
-    siteName: 'ZKsync Docs',
+    siteName: 'zkSync Docs',
   },
   header: {
     logo: {
@@ -82,19 +79,19 @@ export default defineAppConfig({
         icon: 'i-simple-icons-x',
         to: 'https://x.com/zksync',
         target: '_blank',
-        'aria-label': 'ZKsync on X',
+        'aria-label': 'zkSync on X',
       },
       {
         icon: 'i-simple-icons-github',
         to: 'https://github.com/matter-labs',
         target: '_blank',
-        'aria-label': 'ZKsync on GitHub',
+        'aria-label': 'zkSync on GitHub',
       },
       {
         icon: 'i-simple-icons-discord',
         to: 'https://join.zksync.dev/',
         target: '_blank',
-        'aria-label': 'ZKsync on Discord',
+        'aria-label': 'zkSync on Discord',
       },
     ],
   },
@@ -113,7 +110,7 @@ export default defineAppConfig({
         {
           icon: 'i-heroicons-user-group-20-solid',
           label: 'Developer Forum',
-          to: 'https://github.com/ZKsync-Community-Hub/zkync-developers/discussions',
+          to: 'https://github.com/zkSync-Community-Hub/zkync-developers/discussions',
           target: '_blank',
         },
       ],

@@ -213,7 +213,7 @@ contract ZeekSecretMessages {
 
     constructor() {
         // Zeek initializes the contract with a welcome message
-        emit MessageReceived("Zeek welcomes you to ZKsync!");
+        emit MessageReceived("Zeek welcomes you to zkSync!");
     }
 
     // Function to send a "secret" message to Zeek

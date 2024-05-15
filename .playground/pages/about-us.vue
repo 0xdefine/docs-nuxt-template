@@ -1,4 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+defineOgImage({
+  component: 'OgImageZK',
+  title: 'Test Page',
+  description: 'A sample test page to test how content displays.',
+});
+</script>
 
 <template>
   <UPageHeader
@@ -33,12 +39,12 @@
         description="Some description to display for a summary of the blog post that is displayed on this example page."
         date="Dec 25, 2023"
         orientation="vertical"
-        :image="{ src: 'https://picsum.photos/640/360', alt: 'ZKsync' }"
+        :image="{ src: 'https://picsum.photos/640/360', alt: 'zkSync' }"
         :authors="[
           {
             name: 'Jane Doe',
             avatar: { src: 'https://avatars.githubusercontent.com/u/812331?v=4', target: '_blank' },
-            to: 'twitter.com/zksyncDevs',
+            to: 'https://twitter.com/zksyncDevs',
           },
         ]"
         :badge="{ label: 'Release' }"
@@ -49,12 +55,12 @@
         description="Some description to display for a summary of the blog post that is displayed on this example page."
         date="Dec 25, 2023"
         orientation="vertical"
-        :image="{ src: 'https://picsum.photos/640/360', alt: 'ZKsync' }"
+        :image="{ src: 'https://picsum.photos/640/360', alt: 'zkSync' }"
         :authors="[
           {
             name: 'Jane Doe',
             avatar: { src: 'https://avatars.githubusercontent.com/u/812331?v=4', target: '_blank' },
-            to: 'twitter.com/zksyncDevs',
+            to: 'https://twitter.com/zksyncDevs',
           },
         ]"
         :badge="{ label: 'Release' }"
@@ -65,12 +71,12 @@
         description="Some description to display for a summary of the blog post that is displayed on this example page."
         date="Dec 25, 2023"
         orientation="vertical"
-        :image="{ src: 'https://picsum.photos/640/360', alt: 'ZKsync' }"
+        :image="{ src: 'https://picsum.photos/640/360', alt: 'zkSync' }"
         :authors="[
           {
             name: 'Jane Doe',
             avatar: { src: 'https://avatars.githubusercontent.com/u/812331?v=4', target: '_blank' },
-            to: 'twitter.com/zksyncDevs',
+            to: 'https://twitter.com/zksyncDevs',
           },
         ]"
         :badge="{ label: 'Release' }"

@@ -21,6 +21,9 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/eslint',
   ],
+  site: { indexable: process.env.NUXT_SITE_ENV === 'staging' ? false : true },
+  sitemap: { strictNuxtContentPaths: true },
+  redirectToCanonicalSiteUrl: true,
   hooks: {
     // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
     'components:extend': (components) => {
@@ -75,9 +78,12 @@ export default defineNuxtConfig({
       public: {
         app: '',
         urls: {
-          docs: 'https://docs.zksync.io',
-          code: 'https://code.zksync.io',
-          sdk: 'https://docs.zksync.io/sdk',
+          docs: process.env.NUXT_SITE_ENV === 'staging' ? 'https://staging-docs.zksync.io' : 'https://docs.zksync.io',
+          code: process.env.NUXT_SITE_ENV === 'staging' ? 'https://staging-code.zksync.io' : 'https://code.zksync.io',
+          sdk:
+            process.env.NUXT_SITE_ENV === 'staging'
+              ? 'https://zksync-sdk-docs-staging.web.app/sdk'
+              : 'https://docs.zksync.io/sdk',
         },
       },
     },
