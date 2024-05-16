@@ -48,9 +48,6 @@ export default defineAppConfig({
       },
     },
   },
-  seo: {
-    siteName: 'zkSync Docs',
-  },
   header: {
     logo: {
       alt: '',
