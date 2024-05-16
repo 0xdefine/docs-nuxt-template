@@ -78,7 +78,6 @@ export default defineNuxtConfig({
   $development: {
     runtimeConfig: {
       public: {
-        app: 'template',
         urls: {
           docs: 'https://staging-docs.zksync.io',
           code: 'https://staging-code.zksync.io',
@@ -90,7 +89,6 @@ export default defineNuxtConfig({
   $production: {
     runtimeConfig: {
       public: {
-        app: '',
         urls: {
           docs: process.env.NUXT_SITE_ENV === 'staging' ? 'https://staging-docs.zksync.io' : 'https://docs.zksync.io',
           code: process.env.NUXT_SITE_ENV === 'staging' ? 'https://staging-code.zksync.io' : 'https://code.zksync.io',

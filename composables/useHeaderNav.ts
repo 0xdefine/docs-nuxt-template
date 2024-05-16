@@ -4,13 +4,7 @@ export const useHeaderNav = (links: Link[]) => {
   const config = useRuntimeConfig();
   const route = useRoute();
 
-  if (config.public.app === 'template') {
-    return [
-      { label: 'Kitchen Sink', to: '/kitchen-sink' },
-      { label: 'ZK Parser', to: '/zk-parser' },
-      { label: 'Page', to: '/about-us' },
-    ];
-  } else if (links) {
+  if (links) {
     return links;
   } else {
     return [

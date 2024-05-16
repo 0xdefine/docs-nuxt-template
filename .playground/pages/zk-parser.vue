@@ -33,7 +33,7 @@ parseConfig(zkSyncConfig, 'zk');
         v-for="(value, key, indx) in tags"
         :key="indx"
       >
-        {{ key }} -> {{ value }}
+        <strong>{{ key }}</strong> -> {{ value }}
       </li>
     </ul>
   </UPageBody>

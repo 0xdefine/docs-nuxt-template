@@ -16,7 +16,7 @@ const { header } = useAppConfig();
 const headerNav = useHeaderNav(props.links);
 
 const headerLink = computed(() => {
-  if (process.env.NODE_ENV !== 'production') {
+  if (process.env.NODE_ENV !== 'production' || process.env.NUXT_SITE_ENV) {
     return '/';
   } else {
     return config.public.urls[config.public.app] ?? '/';
