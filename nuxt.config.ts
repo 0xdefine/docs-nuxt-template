@@ -68,7 +68,7 @@ export default defineNuxtConfig({
         urls: {
           docs: 'https://staging-docs.zksync.io',
           code: 'https://staging-code.zksync.io',
-          sdk: 'https://zksync-sdk-docs-staging.web.app/sdk',
+          sdk: 'https://staging-sdk-docs.zksync.io/sdk',
         },
       },
     },
@@ -82,7 +82,7 @@ export default defineNuxtConfig({
           code: process.env.NUXT_SITE_ENV === 'staging' ? 'https://staging-code.zksync.io' : 'https://code.zksync.io',
           sdk:
             process.env.NUXT_SITE_ENV === 'staging'
-              ? 'https://zksync-sdk-docs-staging.web.app/sdk'
+              ? 'https://staging-sdk-docs.zksync.io/sdk'
               : 'https://docs.zksync.io/sdk',
         },
       },
