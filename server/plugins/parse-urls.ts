@@ -11,7 +11,7 @@ export default defineNitroPlugin((nitroApp) => {
       if (file._id.endsWith('.md') || file._id.endsWith('.yml')) {
         file.body = file.body.replace(/https:\/\/docs\.zksync\.io(?!\/sdk)/g, 'https://staging-docs.zksync.io');
         file.body = file.body.replace(/https:\/\/docs\.zksync\.io\/sdk/g, 'https://staging-sdk-docs.zksync.io/sdk');
-        file.body = file.body.replace(/https:\/\/code\.zksync\.io/g, 'https://staging-code.zksync.io');
+        file.body = file.body.replace(/https:\/\/code\.zksync\.io/g, 'https://community-cookbook-staging.web.app/');
       }
     }
   });
