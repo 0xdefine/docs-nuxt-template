@@ -22,6 +22,9 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxtjs/seo',
   ],
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
+  },
   site: {
     name: '', // define in child project
     url: '', // define in child project
