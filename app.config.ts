@@ -54,27 +54,13 @@ export default defineAppConfig({
       light: '/logos/zksync_logo_black.svg',
       dark: '/logos/zksync_logo.svg',
     },
-    links: [
-      {
-        icon: 'i-zksync-matterlabs-logo',
-        to: 'https://matter-labs.io',
-        target: '_blank',
-        'aria-label': 'MatterLabs Website',
-      },
-    ],
   },
   footer: {
-    credits: 'Made with ❤️ by Matter Labs & Community',
+    credits: 'Made with ❤️ by the zkSync Community',
     links: [
       {
-        icon: 'i-zksync-matterlabs-logo',
-        to: 'https://matter-labs.io',
-        target: '_blank',
-        'aria-label': 'MatterLabs Website',
-      },
-      {
         icon: 'i-simple-icons-x',
-        to: 'https://x.com/zksync',
+        to: 'https://x.com/zkSyncDevs',
         target: '_blank',
         'aria-label': 'zkSync on X',
       },
@@ -95,8 +81,8 @@ export default defineAppConfig({
   toc: {
     title: 'Table of Contents',
     bottom: {
-      edit: 'https://github.com/matter-labs/zksync-docs/edit/staging/content',
-      feedback: 'https://github.com/matter-labs/zksync-docs/issues/new?labels=documentation',
+      // edit: 'https://github.com/matter-labs/zksync-docs/edit/staging/content',
+      // feedback: 'https://github.com/matter-labs/zksync-docs/issues/new?labels=documentation',
       links: [
         {
           icon: 'i-heroicons-chat-bubble-oval-left-ellipsis-16-solid',

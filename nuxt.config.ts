@@ -29,15 +29,6 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
   },
   sitemap: { strictNuxtContentPaths: true },
-  schemaOrg: {
-    identity: {
-      type: 'Organization',
-      name: 'Matter Labs',
-      url: 'https://matter-labs.io',
-      logo: 'https://pbs.twimg.com/profile_images/1559101255355604993/AHMCbrT4_400x400.jpg',
-      sameAs: ['https://twitter.com/the_matter_labs'],
-    },
-  },
   hooks: {
     // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
     'components:extend': (components) => {

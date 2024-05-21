@@ -5,7 +5,8 @@ export const useHeaderNav = (links: Link[]) => {
   const route = useRoute();
 
   const activeApp = config.public.app;
-  const isDocsApp = activeApp === 'docs' || activeApp === 'sdk';
+  const isDocsApp = activeApp === 'docs';
+  const isSDKApp = activeApp === 'sdk';
   const isCodeApp = activeApp === 'code';
 
   if (links) {
@@ -19,7 +20,7 @@ export const useHeaderNav = (links: Link[]) => {
       },
       {
         label: 'SDK',
-        to: isDocsApp ? '/sdk' : `${config.public.urls.docs}/sdk`,
+        to: isDocsApp || isSDKApp ? '/sdk' : `${config.public.urls.docs}/sdk`,
         active: route.path.startsWith('/sdk'),
       },
       {
