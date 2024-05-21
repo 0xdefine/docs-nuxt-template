@@ -81,7 +81,7 @@ export default defineNuxtConfig({
         urls: {
           docs: 'https://staging-docs.zksync.io',
           code: 'https://community-cookbook-staging.web.app/',
-          sdk: 'https://staging-sdk-docs.zksync.io/sdk',
+          sdk: 'https://staging-docs.zksync.io',
         },
       },
     },
@@ -95,10 +95,7 @@ export default defineNuxtConfig({
             process.env.NUXT_SITE_ENV === 'staging'
               ? 'https://community-cookbook-staging.web.app/'
               : 'https://code.zksync.io',
-          sdk:
-            process.env.NUXT_SITE_ENV === 'staging'
-              ? 'https://staging-sdk-docs.zksync.io/sdk'
-              : 'https://docs.zksync.io/sdk',
+          sdk: process.env.NUXT_SITE_ENV === 'staging' ? 'https://staging-docs.zksync.io' : 'https://docs.zksync.io',
         },
       },
     },

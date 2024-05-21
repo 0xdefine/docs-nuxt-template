@@ -4,40 +4,44 @@ export const useHeaderNav = (links: Link[]) => {
   const config = useRuntimeConfig();
   const route = useRoute();
 
+  const activeApp = config.public.app;
+  const isDocsApp = activeApp === 'docs' || activeApp === 'sdk';
+  const isCodeApp = activeApp === 'code';
+
   if (links) {
     return links;
   } else {
-    return [
+    return computed(() => [
       {
         label: 'Docs',
-        to: config.public.app === 'docs' ? '/build' : `${config.public.urls.docs}/build`,
+        to: isDocsApp ? '/build' : `${config.public.urls.docs}/build`,
         active: route.path.startsWith('/build'),
       },
       {
         label: 'SDK',
-        to: config.public.app === 'sdk' ? '/sdk' : `${config.public.urls.sdk}`,
+        to: isDocsApp ? '/sdk' : `${config.public.urls.docs}/sdk`,
         active: route.path.startsWith('/sdk'),
       },
       {
         label: 'ZK Stack',
-        to: config.public.app === 'docs' ? '/zk-stack' : `${config.public.urls.docs}/zk-stack`,
+        to: isDocsApp ? '/zk-stack' : `${config.public.urls.docs}/zk-stack`,
         active: route.path.startsWith('/zk-stack'),
       },
       {
         label: 'zkSync Node',
-        to: config.public.app === 'docs' ? '/zksync-node' : `${config.public.urls.docs}/zksync-node`,
+        to: isDocsApp ? '/zksync-node' : `${config.public.urls.docs}/zksync-node`,
         active: route.path.startsWith('/zksync-node'),
       },
       {
         label: 'Ecosystem',
-        to: config.public.app === 'docs' ? '/ecosystem' : `${config.public.urls.docs}/ecosystem`,
+        to: isDocsApp ? '/ecosystem' : `${config.public.urls.docs}/ecosystem`,
         active: route.path.startsWith('/ecosystem'),
       },
       {
         label: 'Community Code',
-        to: config.public.app === 'code' ? '/' : `${config.public.urls.code}`,
-        active: route.path.startsWith('/tutorials'),
+        to: isCodeApp ? '/' : `${config.public.urls.code}`,
+        active: isCodeApp,
       },
-    ];
+    ]);
   }
 };
