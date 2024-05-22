@@ -80,24 +80,7 @@ export default defineAppConfig({
   },
   toc: {
     title: 'Table of Contents',
-    bottom: {
-      // edit: 'https://github.com/matter-labs/zksync-docs/edit/staging/content',
-      // feedback: 'https://github.com/matter-labs/zksync-docs/issues/new?labels=documentation',
-      links: [
-        {
-          icon: 'i-heroicons-chat-bubble-oval-left-ellipsis-16-solid',
-          label: 'Chat on Discord',
-          to: 'https://join.zksync.dev/',
-          target: '_blank',
-        },
-        {
-          icon: 'i-heroicons-user-group-20-solid',
-          label: 'Developer Forum',
-          to: 'https://github.com/zkSync-Community-Hub/zkync-developers/discussions',
-          target: '_blank',
-        },
-      ],
-    },
+    bottom: {},
   },
 });
 

@@ -7,7 +7,7 @@ defineProps({
   title: {
     type: String,
     required: true,
-    default: 'Welcome to Docs',
+    default: 'zkSync Docs',
   },
   description: {
     type: String,
@@ -1961,7 +1961,7 @@ defineProps({
       </defs>
     </svg>
     <div class="absolute inset-0 flex h-full items-start justify-center">
-      <div class="flex h-full w-full flex-col items-center justify-center p-20">
+      <div class="flex h-full w-full flex-col content-center items-center justify-center p-20">
         <img
           src="/favicon-32x32.png"
           height="32"
@@ -1970,7 +1970,7 @@ defineProps({
         <h1 class="mt-4 text-center text-[60px] font-bold text-white">
           {{ title }}
         </h1>
-        <p class="text-balance text-center text-[34px] text-white">{{ description }}</p>
+        <p class="w-full text-balance px-10 text-center text-[34px] text-white">{{ description.slice(0, 200) }}</p>
       </div>
     </div>
   </div>
