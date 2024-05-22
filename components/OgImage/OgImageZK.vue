@@ -1960,7 +1960,7 @@ defineProps({
         </radialGradient>
       </defs>
     </svg>
-    <div class="absolute inset-0 flex h-full items-start justify-center">
+    <div class="absolute inset-0 flex h-full w-full items-start justify-center">
       <div class="flex h-full w-full flex-col content-center items-center justify-center p-20">
         <img
           src="/favicon-32x32.png"
