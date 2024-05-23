@@ -1,9 +1,11 @@
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
+import { zksyncIcons } from './assets/zksync-icons';
 import { tailwindcss } from './.nuxt-config/tailwindcss.config';
-import { ui } from './.nuxt-config/ui.config';
 import { content } from './.nuxt-config/content.config';
+
+import { getIconCollections } from '@egoist/tailwindcss-icons';
 
 const currentDir = dirname(fileURLToPath(import.meta.url));
 
@@ -37,7 +39,14 @@ export default defineNuxtConfig({
       globals.forEach((c) => (c.global = true));
     },
   },
-  ui,
+  ui: {
+    icons: {
+      collections: {
+        ...zksyncIcons,
+        ...getIconCollections(['heroicons', 'simple-icons', 'devicon', 'logos']),
+      },
+    },
+  },
   content,
   tailwindcss,
   image: {
@@ -66,12 +75,15 @@ export default defineNuxtConfig({
       },
     },
   },
+  colorMode: {
+    storageKey: 'zksync-color-mode',
+  },
   $development: {
     runtimeConfig: {
       public: {
         urls: {
           docs: 'https://staging-docs.zksync.io',
-          code: 'https://community-cookbook-staging.web.app/',
+          code: 'https://staging-code.zksync.io',
           sdk: 'https://staging-docs.zksync.io',
         },
       },
@@ -82,10 +94,7 @@ export default defineNuxtConfig({
       public: {
         urls: {
           docs: process.env.NUXT_SITE_ENV === 'staging' ? 'https://staging-docs.zksync.io' : 'https://docs.zksync.io',
-          code:
-            process.env.NUXT_SITE_ENV === 'staging'
-              ? 'https://community-cookbook-staging.web.app/'
-              : 'https://code.zksync.io',
+          code: process.env.NUXT_SITE_ENV === 'staging' ? 'https://staging-code.zksync.io' : 'https://code.zksync.io',
           sdk: process.env.NUXT_SITE_ENV === 'staging' ? 'https://staging-docs.zksync.io' : 'https://docs.zksync.io',
         },
       },

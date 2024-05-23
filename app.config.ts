@@ -3,12 +3,12 @@ export default defineAppConfig({
     // potential config options: https://github.com/nuxt/ui/tree/dev/src/runtime/ui.config
     variables: {
       light: {
-        background: '255 252 255',
-        foreground: 'color-gray-900',
+        background: '#F5F6FD',
+        foreground: '#0C0B38',
       },
       dark: {
-        background: 'bg-black',
-        foreground: 'color-white',
+        background: '#0C0B38',
+        foreground: '#F5F6FD',
       },
     },
     primary: 'blue',
@@ -39,11 +39,35 @@ export default defineAppConfig({
           },
         },
       },
+      toc: {
+        button: {
+          label: 'text-left text-balance leading-5',
+        },
+        links: {
+          wrapper: 'space-y-2',
+          base: 'text-left text-balance leading-5',
+        },
+      },
     },
     navigation: {
-      accordion: {
-        button: {
-          label: 'text-left text-pretty',
+      tree: {
+        wrapper: 'space-y-1',
+        links: {
+          wrapper: 'space-y-1',
+          base: 'gap-0.5 py-1',
+          label: 'text-left text-balance leading-5',
+          level: 'pl-2',
+          inactive: 'hover:text-gray-800 dark:hover:text-gray-100',
+        },
+        accordion: {
+          wrapper: 'space-y-1',
+          container: 'space-y-1',
+          tree: 'ml-1 sm:ml-2',
+          button: {
+            base: 'py-1',
+            label: 'text-left text-balance leading-5',
+            level: 'sm:pl-2',
+          },
         },
       },
     },

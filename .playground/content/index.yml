@@ -13,7 +13,7 @@ hero:
     - label: Check out the Kitchen Sink
       icon: i-heroicons-arrow-right-20-solid
       trailing: true
-      to: '/kitchen-sink'
+      to: '/directory'
       size: 'xl'
 features:
   title: 'Explore zkSync Docs'
