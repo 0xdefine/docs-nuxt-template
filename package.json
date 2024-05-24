@@ -22,17 +22,28 @@
     "dev": "NUXT_SITE_ENV=staging nuxi dev .playground",
     "build": "NUXT_SITE_ENV=staging nuxt generate .playground",
     "lint": "eslint .",
-    "prepare": "NUXT_SITE_ENV=staging nuxt prepare .playground",
+    "prepare": "node .husky/install.mjs",
     "lint:spelling": "cspell **/*.md --config=./cspell.json",
     "lint:markdown": "markdownlint-cli2 \"content/**/*.md\" --config \".markdownlint.json\"",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier --check .",
     "fix:prettier": "prettier --write .",
-    "ci:check": "bun run lint:eslint && bun run lint:prettier && bun run lint:spelling && bun run lint:markdown"
+    "ci:check": "bun run lint:eslint && bun run lint:prettier && bun run lint:spelling && bun run lint:markdown",
+    "release": "semantic-release"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^12.0.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^10.0.5",
+    "@semantic-release/release-notes-generator": "^13.0.0",
     "cspell": "^8.8.0",
-    "nuxt": "^3.6.2"
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.4",
+    "nuxt": "^3.6.2",
+    "semantic-release": "^23.1.1"
   },
   "dependencies": {
     "@iconify-json/devicon": "^1.1.41",

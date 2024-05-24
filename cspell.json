@@ -5,14 +5,11 @@
     "*.css",
     "*.config.*",
     "node_modules/**",
-    ".github/**",
-    ".firebase/**",
-    ".yarn/**",
     "dist/**",
-    ".vscode/**",
     "cspell-config/**",
     "package.json",
-    ".**.**"
+    ".**.**",
+    ".*/**"
   ],
   "caseSensitive": true,
   "dictionaries": [
