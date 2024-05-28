@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/matter-labs/docs-nuxt-template/compare/1.0.0...1.0.1) (2024-05-28)
+
+
+### Bug Fixes
+
+* test release workflow 2 ([41764cb](https://github.com/matter-labs/docs-nuxt-template/commit/41764cb024f97ab60847476aff5519220b8146fa))
+
 # 1.0.0 (2024-05-28)
 
 
