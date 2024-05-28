@@ -1,5 +1,8 @@
 {
-  "branches": "main",
+  "branches": [
+    "main",
+    "fix-semver-release"
+  ],
   "debug": true,
   "tagFormat": "${version}",
   "addReleases": "top",

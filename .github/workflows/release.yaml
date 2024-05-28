@@ -2,7 +2,9 @@ name: release 🚀
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+      - fix-semver-release
 
 env:
   HUSKY: 0
