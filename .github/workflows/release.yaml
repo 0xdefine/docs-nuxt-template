@@ -6,6 +6,7 @@ on:
       - main
       - fix-semver-release
 
+
 env:
   HUSKY: 0
   CI: true
