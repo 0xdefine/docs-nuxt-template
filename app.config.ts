@@ -23,6 +23,9 @@ export default defineAppConfig({
         xl: 'py-5 px-8',
       },
     },
+    header: {
+      wrapper: 'dark:bg-black bg-white backdrop-blur-none',
+    },
     footer: {
       bottom: {
         left: 'text-sm text-gray-500 dark:text-gray-400',
