@@ -61,7 +61,7 @@
     "nuxt-headlessui": "^1.2.0",
     "nuxt-og-image": "^3.0.0-rc.53",
     "prettier": "^3.2.5",
-    "prettier-plugin-tailwindcss": "^0.5.14",
+    "prettier-plugin-tailwindcss": "^0.6.0",
     "rehype-katex": "^7.0.0",
     "remark-math": "^6.0.0",
     "typescript": "^5.4.5",
