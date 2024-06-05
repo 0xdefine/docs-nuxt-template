@@ -82,29 +82,6 @@ export default defineAppConfig({
       dark: '/logos/zksync_logo.svg',
     },
   },
-  footer: {
-    credits: 'Made with ❤️ by the zkSync Community',
-    links: [
-      {
-        icon: 'i-simple-icons-x',
-        to: 'https://x.com/zkSyncDevs',
-        target: '_blank',
-        'aria-label': 'zkSync on X',
-      },
-      {
-        icon: 'i-simple-icons-github',
-        to: 'https://github.com/matter-labs',
-        target: '_blank',
-        'aria-label': 'zkSync on GitHub',
-      },
-      {
-        icon: 'i-simple-icons-discord',
-        to: 'https://join.zksync.dev/',
-        target: '_blank',
-        'aria-label': 'zkSync on Discord',
-      },
-    ],
-  },
   toc: {
     title: 'Table of Contents',
     bottom: {},
