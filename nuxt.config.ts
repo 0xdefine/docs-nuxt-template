@@ -63,6 +63,14 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true,
   },
+  routeRules: {
+    '/api/search.json': { prerender: true },
+    '*-surround': { robots: false },
+    '/*/*-surround': { robots: false },
+    '/*/_dir': { robots: false },
+    '/_nuxt': { robots: false },
+    '/api/*': { robots: false },
+  },
   nitro: {
     firebase: {
       gen: 2,
