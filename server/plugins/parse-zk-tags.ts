@@ -1,9 +1,9 @@
-import zkSyncConfig from '../../assets/_zksync.json';
+import ZKsyncConfig from '../../assets/_zksync.json';
 
 const tags: { [key: string]: string } = {};
 
 export default defineNitroPlugin((nitroApp) => {
-  parseConfig(zkSyncConfig, 'zk');
+  parseConfig(ZKsyncConfig, 'zk');
 
   nitroApp.hooks.hook('content:file:beforeParse', (file: { _id: string; body: string }) => {
     if (file._id.endsWith('.md')) {

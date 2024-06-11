@@ -29,7 +29,7 @@ export const useHeaderNav = (links: Link[]) => {
         active: route.path.startsWith('/zk-stack'),
       },
       {
-        label: 'zkSync Node',
+        label: 'ZKsync Node',
         to: isDocsApp ? '/zksync-node' : `${config.public.urls.docs}/zksync-node`,
         active: route.path.startsWith('/zksync-node'),
       },

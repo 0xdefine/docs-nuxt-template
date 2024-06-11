@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import zkSyncConfig from '../../assets/_zksync.json';
+import ZKsyncConfig from '../../assets/_zksync.json';
 const tags: { [key: string]: string } = {};
 
 function parseConfig(config, prefix: string) {
@@ -14,7 +14,7 @@ function parseConfig(config, prefix: string) {
   });
 }
 
-parseConfig(zkSyncConfig, 'zk');
+parseConfig(ZKsyncConfig, 'zk');
 </script>
 
 <template>

@@ -7,12 +7,12 @@ defineProps({
   title: {
     type: String,
     required: true,
-    default: 'zkSync Docs',
+    default: 'ZKsync Docs',
   },
   description: {
     type: String,
     required: true,
-    default: 'The best place to learn everything about zkSync.',
+    default: 'The best place to learn everything about ZKsync.',
   },
 });
 </script>

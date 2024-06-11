@@ -35,7 +35,7 @@ const headerLink = computed(() => {
         <UColorModeImage v-bind="{ class: 'h-6 w-auto', ...header?.logo }" />
       </template>
       <template v-else>
-        zkSync
+        ZKsync
         <UBadge
           label="Docs"
           variant="subtle"

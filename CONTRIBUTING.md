@@ -1,11 +1,11 @@
 # Contributing
 
-If you want to help out with contributing to the content of our documentation for zkSync Docs,
+If you want to help out with contributing to the content of our documentation for ZKsync Docs,
 checkout our [Contribution Guidelines](https://docs.zksync.io/build/contributing-to-documentation).
 
 ## Contributing to the template
 
-This project is a Nuxt Layer that is a re-usable theme to use across zkSync Developer Portal related projects.
+This project is a Nuxt Layer that is a re-usable theme to use across ZKsync Developer Portal related projects.
 
 ## Fork the project
 
