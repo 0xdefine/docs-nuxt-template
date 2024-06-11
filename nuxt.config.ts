@@ -1,9 +1,11 @@
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
+import { zksyncIcons } from './assets/zksync-icons';
 import { tailwindcss } from './.nuxt-config/tailwindcss.config';
-import { ui } from './.nuxt-config/ui.config';
 import { content } from './.nuxt-config/content.config';
+
+import { getIconCollections } from '@egoist/tailwindcss-icons';
 
 const currentDir = dirname(fileURLToPath(import.meta.url));
 
@@ -32,15 +34,6 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
   },
   sitemap: { strictNuxtContentPaths: true },
-  schemaOrg: {
-    identity: {
-      type: 'Organization',
-      name: 'Matter Labs',
-      url: 'https://matter-labs.io',
-      logo: 'https://pbs.twimg.com/profile_images/1559101255355604993/AHMCbrT4_400x400.jpg',
-      sameAs: ['https://twitter.com/the_matter_labs'],
-    },
-  },
   hooks: {
     // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
     'components:extend': (components) => {
@@ -49,7 +42,14 @@ export default defineNuxtConfig({
       globals.forEach((c) => (c.global = true));
     },
   },
-  ui,
+  ui: {
+    icons: {
+      collections: {
+        ...zksyncIcons,
+        ...getIconCollections(['heroicons', 'simple-icons', 'devicon', 'logos']),
+      },
+    },
+  },
   content,
   tailwindcss,
   image: {
@@ -66,6 +66,14 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true,
   },
+  routeRules: {
+    '/api/search.json': { prerender: true },
+    '*-surround': { robots: false },
+    '/*/*-surround': { robots: false },
+    '/*/_dir': { robots: false },
+    '/_nuxt': { robots: false },
+    '/api/*': { robots: false },
+  },
   nitro: {
     firebase: {
       gen: 2,
@@ -78,13 +86,16 @@ export default defineNuxtConfig({
       },
     },
   },
+  colorMode: {
+    storageKey: 'zksync-color-mode',
+  },
   $development: {
     runtimeConfig: {
       public: {
         urls: {
           docs: 'https://staging-docs.zksync.io',
-          code: 'https://community-cookbook-staging.web.app/',
-          sdk: 'https://staging-sdk-docs.zksync.io/sdk',
+          code: 'https://staging-code.zksync.io',
+          sdk: 'https://staging-docs.zksync.io',
         },
       },
     },
@@ -94,14 +105,8 @@ export default defineNuxtConfig({
       public: {
         urls: {
           docs: process.env.NUXT_SITE_ENV === 'staging' ? 'https://staging-docs.zksync.io' : 'https://docs.zksync.io',
-          code:
-            process.env.NUXT_SITE_ENV === 'staging'
-              ? 'https://community-cookbook-staging.web.app/'
-              : 'https://code.zksync.io',
-          sdk:
-            process.env.NUXT_SITE_ENV === 'staging'
-              ? 'https://staging-sdk-docs.zksync.io/sdk'
-              : 'https://docs.zksync.io/sdk',
+          code: process.env.NUXT_SITE_ENV === 'staging' ? 'https://staging-code.zksync.io' : 'https://code.zksync.io',
+          sdk: process.env.NUXT_SITE_ENV === 'staging' ? 'https://staging-docs.zksync.io' : 'https://docs.zksync.io',
         },
       },
     },

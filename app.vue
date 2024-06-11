@@ -14,8 +14,8 @@ const links = computed(() => {
   return [
     {
       label: 'Kitchen Sink',
-      to: '/kitchen-sink',
-      active: route.path.startsWith('/kitchen-sink'),
+      to: '/directory',
+      active: route.path.startsWith('/directory'),
     },
     {
       label: 'ZK Parser',

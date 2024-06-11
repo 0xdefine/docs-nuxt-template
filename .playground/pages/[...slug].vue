@@ -4,6 +4,11 @@ import { withoutTrailingSlash } from 'ufo';
 
 const route = useRoute();
 const { seo } = useAppConfig();
+
+definePageMeta({
+  layout: 'directory',
+});
+
 const navigation = inject<Ref<NavItem[]>>('navigation', ref([]));
 const { data: page } = await useAsyncData(route.path, () => queryContent(route.path).findOne());
 

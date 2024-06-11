@@ -1,5 +1,5 @@
 title: 'zkSync Docs'
-description: The best place to learn everything about zkSync.
+description: Access detailed guides, references and resources that will help you build with zkSync Era.
 navigation: false
 hero:
   title: 'Unlock the Potential of Layer 2 Scaling with zkSync'
@@ -13,7 +13,7 @@ hero:
     - label: Check out the Kitchen Sink
       icon: i-heroicons-arrow-right-20-solid
       trailing: true
-      to: '/kitchen-sink'
+      to: '/directory'
       size: 'xl'
 features:
   title: 'Explore zkSync Docs'

@@ -3,12 +3,12 @@ export default defineAppConfig({
     // potential config options: https://github.com/nuxt/ui/tree/dev/src/runtime/ui.config
     variables: {
       light: {
-        background: '255 252 255',
-        foreground: 'color-gray-900',
+        background: '#F5F6FD',
+        foreground: '#0C0B38',
       },
       dark: {
-        background: 'bg-black',
-        foreground: 'color-white',
+        background: '#0C0B38',
+        foreground: '#F5F6FD',
       },
     },
     primary: 'blue',
@@ -22,6 +22,9 @@ export default defineAppConfig({
       padding: {
         xl: 'py-5 px-8',
       },
+    },
+    header: {
+      wrapper: 'dark:bg-black bg-white backdrop-blur-none',
     },
     footer: {
       bottom: {
@@ -39,11 +42,35 @@ export default defineAppConfig({
           },
         },
       },
+      toc: {
+        button: {
+          label: 'text-left text-balance leading-5',
+        },
+        links: {
+          wrapper: 'space-y-2',
+          base: 'text-left text-balance leading-5',
+        },
+      },
     },
     navigation: {
-      accordion: {
-        button: {
-          label: 'text-left text-pretty',
+      tree: {
+        wrapper: 'space-y-1',
+        links: {
+          wrapper: 'space-y-1',
+          base: 'gap-0.5 py-1',
+          label: 'text-left text-balance leading-5',
+          level: 'pl-2',
+          inactive: 'hover:text-gray-800 dark:hover:text-gray-100',
+        },
+        accordion: {
+          wrapper: 'space-y-1',
+          container: 'space-y-1',
+          tree: 'ml-1 sm:ml-2',
+          button: {
+            base: 'py-1',
+            label: 'text-left text-balance leading-5',
+            level: 'sm:pl-2',
+          },
         },
       },
     },
@@ -54,64 +81,10 @@ export default defineAppConfig({
       light: '/logos/zksync_logo_black.svg',
       dark: '/logos/zksync_logo.svg',
     },
-    links: [
-      {
-        icon: 'i-zksync-matterlabs-logo',
-        to: 'https://matter-labs.io',
-        target: '_blank',
-        'aria-label': 'MatterLabs Website',
-      },
-    ],
-  },
-  footer: {
-    credits: 'Made with ❤️ by Matter Labs & Community',
-    links: [
-      {
-        icon: 'i-zksync-matterlabs-logo',
-        to: 'https://matter-labs.io',
-        target: '_blank',
-        'aria-label': 'MatterLabs Website',
-      },
-      {
-        icon: 'i-simple-icons-x',
-        to: 'https://x.com/zksync',
-        target: '_blank',
-        'aria-label': 'zkSync on X',
-      },
-      {
-        icon: 'i-simple-icons-github',
-        to: 'https://github.com/matter-labs',
-        target: '_blank',
-        'aria-label': 'zkSync on GitHub',
-      },
-      {
-        icon: 'i-simple-icons-discord',
-        to: 'https://join.zksync.dev/',
-        target: '_blank',
-        'aria-label': 'zkSync on Discord',
-      },
-    ],
   },
   toc: {
     title: 'Table of Contents',
-    bottom: {
-      edit: 'https://github.com/matter-labs/zksync-docs/edit/staging/content',
-      feedback: 'https://github.com/matter-labs/zksync-docs/issues/new?labels=documentation',
-      links: [
-        {
-          icon: 'i-heroicons-chat-bubble-oval-left-ellipsis-16-solid',
-          label: 'Chat on Discord',
-          to: 'https://join.zksync.dev/',
-          target: '_blank',
-        },
-        {
-          icon: 'i-heroicons-user-group-20-solid',
-          label: 'Developer Forum',
-          to: 'https://github.com/zkSync-Community-Hub/zkync-developers/discussions',
-          target: '_blank',
-        },
-      ],
-    },
+    bottom: {},
   },
 });
 

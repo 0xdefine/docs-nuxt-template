@@ -68,7 +68,13 @@ const headerLink = computed(() => {
     </template>
 
     <template #panel>
-      <UNavigationTree :links="mapContentNavigation(navigation)" />
+      <UVerticalNavigation :links />
+      <UDivider class="my-2" />
+      <UNavigationTree
+        :links="mapContentNavigation(navigation)"
+        :multiple="false"
+        default-open
+      />
     </template>
   </UHeader>
 </template>
