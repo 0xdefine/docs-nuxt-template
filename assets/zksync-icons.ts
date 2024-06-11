@@ -2,7 +2,7 @@ export const zksyncIcons = {
   zksync: {
     icons: {
       'zksync-logo': {
-        body: '<svg width="100%" height="100%" viewBox="0 0 1112 656" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g><path fill="currentColor" d="M1043.02,323.053l-277.916,-276.666l-0,202.5l-275.834,202.916l275.834,0l-0,147.917l277.916,-276.667Z"/><path fill="currentColor" d="M63.85,323.053l277.916,276.667l0,-201.25l275.834,-204.583l-275.834,-0l0,-147.917l-277.916,277.083Z"/></g></svg>',
+        body: '<svg width="100%" height="100%" viewBox="0 0 834 834" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><path d="M248.018,191.802l-224.864,224.865l224.864,224.864l0,-168.648l224.865,-168.649l-224.865,0l0,-112.432Z" style="fill-rule:currentColor;"/><path d="M810.179,416.667l-224.864,-224.865l0,168.649l-224.864,168.648l224.864,-0l0,112.432l224.864,-224.864Z" style="fill-rule:currentColor;"/></svg>',
       },
       'matterlabs-logo': {
         // svg body
