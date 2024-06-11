@@ -66,11 +66,21 @@ defineOgImage({
 <style>
 .page-enter-active,
 .page-leave-active {
-  transition: all 0.4s;
+  transition: all 0.25s;
 }
 .page-enter-from,
 .page-leave-to {
   opacity: 0;
-  filter: blur(1rem);
+  filter: blur(0.3rem);
+}
+
+.layout-enter-active,
+.layout-leave-active {
+  transition: all 0.25s;
+}
+.layout-enter-from,
+.layout-leave-to {
+  opacity: 0;
+  filter: blur(0.3rem);
 }
 </style>
